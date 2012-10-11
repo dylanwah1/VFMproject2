@@ -6,7 +6,19 @@ window.addEventListener("DOMContentLoaded", function(){
 	function $(x) {
 		var theElement = document.getElementById(x);
 		return theElement;
-	};
+	}
+	
+	function getTats(){
+		var formTag = document.getElementsByTagName("form"),
+			selectLi = $('select'),
+			makeSelect = document.createElement('select');
+			makeSelect.setAttribute("id", "groups);
+			var makeOption = document.createElement('option');
+			makeOption.setAttribute("value");
+			makeSelect.appendChild(makeOption);
+		}
+		selectLi.appendChild(makeSelect);
+	}
 	
 	function getSelectedRadio(){
 		var radios = document.forms[0].sex;
@@ -21,7 +33,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var id 			= Math.floor(math.random()*1000000001);
 		//gather up all form values and store in an object
 		//Object properties contain array with the form label and input values
-		getSelectedRadio();
+		getSelectedRadios();
 		var item		= {};
 			item.fname	= ["First Name:", $('fname').value];
 			item.lname 	= ["Last Name:", $('lname').value];
@@ -35,7 +47,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Tattoo Appointment Made!");		
 	}
-	function getData(){
+	var sexValue;
+	getTats();
+	/*function getData(){
 		var makeDiv = document.createElement('div');
 		makeDiv/setAttribute("id", "items");
 		var makeList = document.createElement('ul');
@@ -46,7 +60,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
 			var obj = JSON.parse(value);
-	var sexValue;
+	*/
 	
 	
 	//Set link and submit click events
