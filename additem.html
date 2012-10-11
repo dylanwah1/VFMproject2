@@ -16,9 +16,10 @@
 		<feildset>
 			<h4><ledgend>Your Information</ledgend></h4>
 			<ul>
-				<li><label for="fname">First Name:</lable><input type="text" id="fname" /></li>
-				<li><label for="lname">Last Name:</lable><input type="text" id="lname" /></li>
-				<li><label for="email">Email:</lable><input type="email" id="email" placeholder="Enter your email address" /></li>
+				<li id="select"><label for="group">*Add To Group:</label><br/></li><select id="groups"></select>
+				<li><label for="fname">*First Name:</lable><input type="text" id="fname" /></li>
+				<li><label for="lname">*Last Name:</lable><input type="text" id="lname" /></li>
+				<li><label for="email">*Email:</lable><input type="email" id="email" placeholder="Enter your email address" /></li>
 				<li><input type="radio" name="sex" value="male" /><label for="sex">Male</label></li>
 				<li><input type="radio" name="sex" value="female" /><label for="sex">Female</label></li>
 				<input type="hidden" name="Language" value="English">
@@ -28,7 +29,7 @@
 			<h4><ledgend>Tattoo Information</ledgend></h4>
 			<ul>
 				<li><label for="url">Website for desired artwork:</lable><input type="url" id="url" placeholder="If unavailable N/A" /></li>
-				<li><label for="date">Desired date:</label><input type="datetime" id="date" placeholder="mm/dd/yy" /></li>
+				<li><label for="date">*Desired date:</label><input type="datetime" id="date" placeholder="mm/dd/yy" /></li>
 				<li><lable for="pain">Pain Tolerance</label><input type="range" id="pain" min="1" max="10" /></li>
 				<li><label for="comments">Comments:</lable><input type="text" id="comments" /></li>
 			</ul>
@@ -37,6 +38,6 @@
 			<a href="#" id="clear">Clear Stored Data</a>
 			<a href="#" id="displayLink">Display Data</a>
 		</form>
-		<script src="/Users/dylanwahlstrom/Desktop/Wahlstrom_Dylan_project2/main.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>
