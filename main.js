@@ -56,10 +56,10 @@ window.addEventListener("DOMContentLoaded", function(){
 
     
     function storeData(){
-        var id             = Math.floor(math.random()*1000000001);
+        var id             = Math.floor(Math.random()*1000000001);
         getSelectedRadio();
         var item        = {};
-	    	item.style  = ["Style:", $('groups').value];
+	    item.style  = ["Style:", $('groups').value];
             item.fname  = ["First Name:", $('fname').value];
             item.lname  = ["Last Name:", $('lname').value];
             item.email  = ["Email:", $('email').value];
