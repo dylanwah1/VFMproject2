@@ -9,8 +9,8 @@ window.addEventListener("DOMContentLoaded", function(){
     }
     
     function getTats(){
-        var formTag = document.getElementsByTagName('form'),
-            selectLi = $('select'),
+        var formTag = document.getElementsByTagName("form"),
+            selectLi = $('dropDown'),
             makeSelect = document.createElement('select');
             makeSelect.setAttribute("id", "groups");
 	for(var i=0, j=styleGroups.length; i<j; i++){
@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function(){
     
     function getSelectedRadio(){
         var radios = document.forms[0].sex;
-        for(var i=0; j=radios.length; i++){
+        for(var i=0; i<radios.length; i++){
             if(radios[i].checked){
                 sexValue = radios[i].value;
             }
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function(){
         var id             = Math.floor(math.random()*1000000001);
         getSelectedRadio();
         var item        = {};
-	    item.style  = ["Style:", $('groups').value];
+	    	item.style  = ["Style:", $('groups').value];
             item.fname  = ["First Name:", $('fname').value];
             item.lname  = ["Last Name:", $('lname').value];
             item.email  = ["Email:", $('email').value];
@@ -71,7 +71,8 @@ window.addEventListener("DOMContentLoaded", function(){
        
         localStorage.setItem(id, JSON.stringify(item));
         alert("Tattoo Appointment Made!");        
-    };
+    }
+    
    function getData(){
 		toggleControls("on");
 		if(localStorage.length === 0){
@@ -115,7 +116,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
     var styleGroups = ["--Choose A Style--", "Color", "Black & White", "Outline"];   
-	sexValue;
+    var	sexValue;
     getTats ();
         var displayData = $('displayData');
 	displayData.addEventListener("click", getData);
